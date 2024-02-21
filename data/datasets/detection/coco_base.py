@@ -43,7 +43,7 @@ class COCODetection(BaseDetectionDataset):
         super().__init__(opts=opts, *args, **kwargs)
 
         split = "train" if self.is_training else "val"
-        year = 2017
+        year = 2014
         ann_file = os.path.join(
             self.root, "annotations/instances_{}{}.json".format(split, year)
         )

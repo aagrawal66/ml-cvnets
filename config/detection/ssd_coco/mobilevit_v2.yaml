@@ -7,8 +7,8 @@ common:
   auto_resume: true
   mixed_precision: true
 dataset:
-  root_train: "/mnt/vision_datasets/coco"
-  root_val: "/mnt/vision_datasets/coco"
+  root_train: "/home/saa4743/coco_data/data_2014"
+  root_val: "/home/saa4743/coco_data/data_2014"
   name: "coco_ssd"
   category: "detection"
   train_batch_size0: 32 # effective batch size is 128 (32 * 4 GPUs)
@@ -43,7 +43,7 @@ optim:
 scheduler:
   name: "cosine"
   is_iteration_based: false
-  max_epochs: 200
+  max_epochs: 10
   warmup_iterations: 500
   warmup_init_lr: 0.00009
   cosine:
